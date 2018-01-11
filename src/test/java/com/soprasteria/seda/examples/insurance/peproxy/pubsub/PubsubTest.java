@@ -1,4 +1,4 @@
-package com.soprasteria.peproxy.pubsub;
+package com.soprasteria.seda.examples.insurance.peproxy.pubsub;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

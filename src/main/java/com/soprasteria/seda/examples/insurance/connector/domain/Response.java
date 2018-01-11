@@ -1,4 +1,4 @@
-package com.soprasteria.connector.domain;
+package com.soprasteria.seda.examples.insurance.connector.domain;
 
 public class Response<T> {
     private final T content;

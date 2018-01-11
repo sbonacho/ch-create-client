@@ -1,4 +1,4 @@
-package com.soprasteria.connector.domain;
+package com.soprasteria.seda.examples.insurance.connector.domain;
 
 import java.util.ArrayList;
 import java.util.List;

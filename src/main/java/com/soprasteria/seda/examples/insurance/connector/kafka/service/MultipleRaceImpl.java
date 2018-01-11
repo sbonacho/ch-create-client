@@ -1,9 +1,13 @@
-package com.soprasteria.connector.kafka.service;
+package com.soprasteria.seda.examples.insurance.connector.kafka.service;
 
 import com.soprasteria.connector.domain.Message;
 import com.soprasteria.connector.domain.Response;
 import com.soprasteria.connector.producer.Sender;
 import com.soprasteria.connector.service.MultipleRace;
+import com.soprasteria.seda.examples.insurance.connector.domain.Message;
+import com.soprasteria.seda.examples.insurance.connector.domain.Response;
+import com.soprasteria.seda.examples.insurance.connector.producer.Sender;
+import com.soprasteria.seda.examples.insurance.connector.service.MultipleRace;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MultipleRaceImpl implements MultipleRace<List>{
+public class MultipleRaceImpl implements MultipleRace<List> {
 
     @Autowired
     private Sender sender;

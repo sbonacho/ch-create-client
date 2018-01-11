@@ -3,12 +3,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.soprasteria.pocs.seda</groupId>
-    <artifactId>ch-new-client</artifactId>
+    <groupId>org.soprasteria.seda.examples.insurance</groupId>
+    <artifactId>ch-create-client</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
-    <name>ch-new-client</name>
-    <description>New Client Command Handler</description>
+    <name>ch-create-client</name>
+    <description>Create Client Command Handler</description>
 
     <repositories>
         <repository>

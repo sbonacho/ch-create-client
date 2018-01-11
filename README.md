@@ -1,6 +1,6 @@
-# Command Handler - New Client
+# Command Handler - Create Client
 
-This microservice acts as a Command Handler API for the functionality New Client in a Insurance POC. 
+This microservice acts as a Command Handler API for the functionality Create Client in a Insurance POC.
   
 
 # Docker Generation
@@ -14,19 +14,19 @@ mvn install dockerfile:build
 This command starts the service with pe-proxy name
 
 ```
-docker run --rm -p 8080:8080 -dit --name ch-new-client soprasteria/ch-new-client
+docker run --rm -p 8080:8080 -dit --name ch-create-client soprasteria/ch-create-client
 ```
 
 Watching logs
 
 ```
-docker logs ch-new-client -f
+docker logs ch-create-client -f
 ```
 
 Stopping the service
 
 ```
-docker stop ch-new-client
+docker stop ch-create-client
 ```
 
 # Issues

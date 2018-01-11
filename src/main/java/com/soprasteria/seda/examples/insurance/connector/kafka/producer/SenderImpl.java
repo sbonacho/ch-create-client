@@ -1,6 +1,6 @@
-package com.soprasteria.connector.kafka.producer;
+package com.soprasteria.seda.examples.insurance.connector.kafka.producer;
 
-import com.soprasteria.connector.producer.Sender;
+import com.soprasteria.seda.examples.insurance.connector.producer.Sender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
