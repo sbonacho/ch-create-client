@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.soprasteria.seda.examples.insurance.peproxy.api;
+package com.soprasteria.seda.examples.insurance.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,7 +35,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class CreateClientTests {
+public class CreateClientBootTests {
 
 	@Autowired
 	private TestRestTemplate restTemplate;

@@ -1,6 +1,6 @@
-package com.soprasteria.seda.examples.insurance.connector.kafka.producer;
+package com.soprasteria.seda.examples.insurance.bus.kafka.producer;
 
-import com.soprasteria.seda.examples.insurance.connector.producer.Sender;
+import com.soprasteria.seda.examples.insurance.bus.producer.Sender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,21 +9,19 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 
-import java.util.List;
-
 @Service
-public class SenderImpl implements Sender<List> {
+public class SenderImpl<E> implements Sender<E> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SenderImpl.class);
 
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
 
-    @Value("${connector.topics.in}")
+    @Value("${connector.topic}")
     private String topic;
 
-    public ListenableFuture send(List message) {
-        LOGGER.info("sending message='{}' to topic='{}'", message, topic);
-        return kafkaTemplate.send(topic, message);
+    public ListenableFuture send(E event) {
+        LOGGER.info("sending message='{}' to topic='{}'", event, topic);
+        return kafkaTemplate.send(topic, event);
     }
 }

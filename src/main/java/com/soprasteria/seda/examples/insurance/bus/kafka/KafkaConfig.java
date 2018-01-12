@@ -1,4 +1,4 @@
-package com.soprasteria.seda.examples.insurance.connector.kafka;
+package com.soprasteria.seda.examples.insurance.bus.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;

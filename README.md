@@ -31,12 +31,18 @@ docker stop ch-create-client
 
 # Issues
 
-java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
+- java.lang.NoSuchMethodError: org.springframework.util.Assert.state(ZLjava/util/function/Supplier;)V
 
 Solved: Update to 2.0.0.M7 of spring-boot and 2.1.0.RC1 of spring-kafka adaptor.
 
-- Problem deserializating object from JSON. (workaround: introducing object into a ArrayList)  
+- If spring boot starts and kafka is not up
+    - 1. There is no error.
+    - 2. If after that kafka starts CreateService never gets recovered. Restart service is needed.
+- If kafka is stopped timeout return 200 OK
 
 # TODO
 
-- Kafka api separate to another module (Jar file)
+- Kafka bus implementation separate to another module (Jar file)
+- Events separate to another module (Jar file)
+
+
