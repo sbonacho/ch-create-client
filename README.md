@@ -1,7 +1,8 @@
 # Command Handler - Create Client
 
 This microservice acts as a Command Handler API for the functionality Create Client in a Insurance POC.
-  
+
+Is Asynchronous: Only send event to kafka, is not waiting for the last event sent by Saga microservice.
 
 # Docker Generation
 
@@ -40,5 +41,3 @@ docker stop ch-create-client
 
 - Kafka bus implementation separate to another module (Jar file)
 - Events separate to another module (Jar file)
-
-

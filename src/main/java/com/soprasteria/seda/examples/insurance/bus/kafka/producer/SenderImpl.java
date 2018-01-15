@@ -15,7 +15,7 @@ public class SenderImpl<E> implements Sender<E> {
     private static final Logger LOGGER = LoggerFactory.getLogger(SenderImpl.class);
 
     @Autowired
-    private KafkaTemplate<String, Object> kafkaTemplate;
+    private KafkaTemplate<String, E> kafkaTemplate;
 
     @Value("${connector.topic}")
     private String topic;
