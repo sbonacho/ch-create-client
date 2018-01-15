@@ -21,7 +21,7 @@ public class SenderImpl<E> implements Sender<E> {
     private String topic;
 
     public ListenableFuture send(E event) {
-        LOGGER.info("sending message='{}' to topic='{}'", event, topic);
+        LOGGER.info("sending event='{}' to topic='{}'", event, topic);
         return kafkaTemplate.send(topic, event);
     }
 }

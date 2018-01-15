@@ -29,7 +29,7 @@ public class ClientController {
 	@RequestMapping(method = POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseEntity createClient(@RequestBody @Valid CreateClient command) {
-		LOGGER.info("Create client command received -> {}", command);
+		LOGGER.info("CreateClient API command received -> {}", command);
 		try {
 			sender.send(Command2Event.CreateClient2Event(command));
 			return new ResponseEntity(HttpStatus.OK);
