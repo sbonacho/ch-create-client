@@ -12,7 +12,7 @@ mvn install dockerfile:build
 
 # Run the service
 
-This command starts the service with pe-proxy name
+This command starts the service with ch-create-client name
 
 ```
 docker run --rm -p 8080:8080 -dit --name ch-create-client soprasteria/ch-create-client

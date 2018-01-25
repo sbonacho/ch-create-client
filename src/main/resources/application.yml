@@ -18,8 +18,8 @@ endpoints:
     enabled: true
 
 kafka:
-  bootstrap-servers: 192.168.0.95:9092
+  bootstrap-servers: 172.16.123.1:9092
 
 connector:
-  topic: general
-  group: createClient
+  topics:
+    app: createClient

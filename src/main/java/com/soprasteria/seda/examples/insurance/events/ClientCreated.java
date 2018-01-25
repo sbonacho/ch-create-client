@@ -2,9 +2,6 @@ package com.soprasteria.seda.examples.insurance.events;
 
 import java.util.UUID;
 
-/**
- * In this example is exactly the same CreateClient command so this is not
- */
 public class ClientCreated extends AbstractEvent {
 
     public ClientCreated() {
