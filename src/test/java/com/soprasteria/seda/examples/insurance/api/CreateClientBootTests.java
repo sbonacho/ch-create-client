@@ -60,11 +60,11 @@ public class CreateClientBootTests {
 				.contentType(contentType))
 				.andExpect(status().is2xxSuccessful());
 
-        Map<String, Object> consumerProps = KafkaTestUtils.consumerProps("testGroup", "true", this.embeddedKafka);
+        Map<String, Object> consumerProps = KafkaTestUtils.consumerProps("testGroup", "true", embeddedKafka);
         consumerProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         ConsumerFactory<Integer, String> cf = new DefaultKafkaConsumerFactory<>(consumerProps);
         Consumer<Integer, String> consumer = cf.createConsumer();
-        this.embeddedKafka.consumeFromAnEmbeddedTopic(consumer, topic);
+        embeddedKafka.consumeFromAnEmbeddedTopic(consumer, topic);
         ConsumerRecords<Integer, String> replies = KafkaTestUtils.getRecords(consumer);
 
         assertThat(replies.count()).isEqualTo(1);

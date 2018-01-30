@@ -4,6 +4,19 @@ This microservice acts as a Command Handler API for the functionality Create Cli
 
 Is Asynchronous: Only send event to kafka, is not waiting for the last event sent by Saga microservice.
 
+# Running Microservice
+
+```
+mvn package
+java -jar target/ch-create-client-0.1.0.jar
+```
+
+or
+
+```
+mvn spring-boot:run
+```
+
 # Docker Generation
 
 ```
@@ -36,8 +49,3 @@ docker stop ch-create-client
     - 1. There is no error.
     - 2. If after that kafka starts CreateService never gets recovered. Restart service is needed.
 - If kafka is stopped timeout return 200 OK
-
-# TODO
-
-- Kafka bus implementation separate to another module (Jar file)
-- Events separate to another module (Jar file)
