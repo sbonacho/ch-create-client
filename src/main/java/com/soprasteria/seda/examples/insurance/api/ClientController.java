@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 @Controller
 @RequestMapping("/client")
@@ -31,7 +31,7 @@ public class ClientController {
 	private Boolean synchronous;
 
 
-	@RequestMapping(method = POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(method = PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseEntity createClient(@RequestBody @Valid CreateClient command) {
 		LOGGER.info("CreateClient API command received -> {}", command);

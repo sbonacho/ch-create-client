@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -55,7 +55,7 @@ public class CreateClientBootTests {
 	    String payload = "{\"name\": \"John Doe\", \"address\": \"Bendford st 10\", \"interest\": \"Microservices\"}";
 	    String eventName = "ClientCreated";
 
-		mockMvc.perform(post("/client")
+		mockMvc.perform(put("/client")
 				.content(payload)
 				.contentType(contentType))
 				.andExpect(status().is2xxSuccessful());
