@@ -7,3 +7,6 @@ kafka:
 connector:
   topics:
     app: createClient
+
+response:
+  synchronous: false
