@@ -1,7 +1,7 @@
-package com.soprasteria.seda.examples.insurance.adapters;
+package com.sbonacho.seda.examples.insurance.adapters;
 
-import com.soprasteria.seda.examples.insurance.api.model.CreateClient;
-import com.soprasteria.seda.examples.insurance.events.ClientCreated;
+import com.sbonacho.seda.examples.insurance.api.model.CreateClient;
+import com.sbonacho.seda.examples.insurance.events.ClientCreated;
 
 public class Command2Event {
 

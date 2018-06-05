@@ -1,9 +1,9 @@
-package com.soprasteria.seda.examples.insurance.api;
+package com.sbonacho.seda.examples.insurance.api;
 
-import com.soprasteria.seda.examples.insurance.adapters.Command2Event;
-import com.soprasteria.seda.examples.insurance.api.model.CreateClient;
-import com.soprasteria.seda.examples.insurance.bus.producer.Sender;
-import com.soprasteria.seda.examples.insurance.events.ClientCreated;
+import com.sbonacho.seda.examples.insurance.api.model.CreateClient;
+import com.sbonacho.seda.examples.insurance.adapters.Command2Event;
+import com.sbonacho.seda.examples.insurance.bus.producer.Sender;
+import com.sbonacho.seda.examples.insurance.events.ClientCreated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

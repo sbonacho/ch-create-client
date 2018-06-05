@@ -1,4 +1,4 @@
-package com.soprasteria.seda.examples.insurance.api;
+package com.sbonacho.seda.examples.insurance.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.Consumer;

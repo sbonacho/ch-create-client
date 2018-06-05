@@ -1,4 +1,4 @@
-package com.soprasteria.seda.examples.insurance.bus.kafka;
+package com.sbonacho.seda.examples.insurance.bus.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
